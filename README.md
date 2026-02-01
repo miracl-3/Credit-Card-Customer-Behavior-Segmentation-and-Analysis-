@@ -49,7 +49,7 @@ This is a dataset for developing a customer segmentation. The dataset summarizes
 8. Segment personas + actionable insights  
 
 ## Data Insights
-### Feature distribution overview
+### Feature Distribution Overview
 <p align="center">
   <img src="reports/figures/Data_Features_Distribution.png" width="750" alt="Data_Features_Distribution">
 </p>
