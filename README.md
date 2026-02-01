@@ -49,11 +49,28 @@ This is a dataset for developing a customer segmentation. The dataset summarizes
 8. Segment personas + actionable insights  
 
 ## Data Insights
+### Feature distribution overview
+<p align="center">
+  <img src="reports/figures/Data_Features_Distribution.png" width="750" alt="Data_Features_Distribution">
+</p>
+
+- **Heavy right-skew & outliers:** Monetary features (e.g., `BALANCE`, `PAYMENTS`, `CREDIT_LIMIT`) show long right tails, meaning a small number of customers have very large values.
+- **Zero-inflation / non-usage behavior:** Many activity features have a large spike at **0** (e.g., `PURCHASES`, `ONEOFF_PURCHASES`, `INSTALLMENTS_PURCHASES`, `CASH_ADVANCE`, `CASH_ADVANCE_TRX`), suggesting a sizable group of customers rarely/never uses those behaviors.
+- **Log1p makes spending behavior clearer:** After applying `log1p` to skewed amount/count variables, several distributions become more “bell-shaped,” making typical customer behavior easier to observe (instead of being dominated by extreme values).
+- **Frequency features are polarized:** Several `*_FREQUENCY` variables (0–1) show mass near **0** and/or **1**, indicating many customers either use the card **very rarely** or **very consistently** rather than evenly spread usage.
+- **Cash advance behavior is uncommon for most:** `CASH_ADVANCE_FREQUENCY` is concentrated near **0**, implying most customers rarely take cash advances.
+- **Full payment tendency is mostly low:** `PRC_FULL_PAYMENT` is heavily concentrated near **0**, suggesting many customers do not frequently pay the full balance (with a smaller group closer to full payment).
+- **TENURE is concentrated at 12 months:** Most customers have `TENURE = 12`, so tenure provides limited separation compared to transactional/spending behaviors.
 
 ### Correlated Data Features Exploration using "Spearman Correlation Heatmap"
-<img src="reports/figures/Features_Correlation.png" width="750" alt="Correlation Heatmap">
+<p align="center">
+  <img src="reports/figures/Features_Correlation.png" width="750" alt="Correlation Heatmap">
+</p>
 
 - Purchase metrics (`PURCHASES`, `PURCHASES_TRX`, `PURCHASES_FREQUENCY`) strongly move together, capturing overall spending activity.
 - Cash-advance metrics (`CASH_ADVANCE`, `CASH_ADVANCE_TRX`, `CASH_ADVANCE_FREQUENCY`) also move together, representing cash-advance behavior intensity.
 - Higher `BALANCE` aligns with higher `MINIMUM_PAYMENTS`, indicating revolving balance relates to repayment obligation.
 - `PRC_FULL_PAYMENT` generally contrasts with balance/cash-advance behavior (customers paying in full tend to carry lower revolving/cash-advance patterns).
+
+## Credit-card Service Strategy
+
