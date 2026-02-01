@@ -50,6 +50,12 @@ This is a dataset for developing a customer segmentation. The dataset summarizes
 7. Cluster profiling (z-delta heatmap + per-cluster drivers)  
 8. Segment personas + actionable insights  
 
-## Insights
+## Data Insights
 
-# Correlated Data Features using Spearman Correalation Heatmap
+### Correlated Data Features Exploration using "Spearman Correlation Heatmap"
+<img src="reports/figures/Features_Correlation.png" width="750" alt="Correlation Heatmap">
+
+- Purchase metrics (`PURCHASES`, `PURCHASES_TRX`, `PURCHASES_FREQUENCY`) strongly move together, capturing overall spending activity.
+- Cash-advance metrics (`CASH_ADVANCE`, `CASH_ADVANCE_TRX`, `CASH_ADVANCE_FREQUENCY`) also move together, representing cash-advance behavior intensity.
+- Higher `BALANCE` aligns with higher `MINIMUM_PAYMENTS`, indicating revolving balance relates to repayment obligation.
+- `PRC_FULL_PAYMENT` generally contrasts with balance/cash-advance behavior (customers paying in full tend to carry lower revolving/cash-advance patterns).
