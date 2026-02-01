@@ -72,5 +72,36 @@ This is a dataset for developing a customer segmentation. The dataset summarizes
 - Higher `BALANCE` aligns with higher `MINIMUM_PAYMENTS`, indicating revolving balance relates to repayment obligation.
 - `PRC_FULL_PAYMENT` generally contrasts with balance/cash-advance behavior (customers paying in full tend to carry lower revolving/cash-advance patterns).
 
+## Segment Drivers (z-delta)
+
+**z-delta (standardized difference)** = (cluster mean − overall mean) / overall std.  
+Positive = higher than typical customer, negative = lower.
+
+<p align="center">
+  <img src="reports/figures/Segment feature highlights.png" width="900" alt="Top differentiating features by cluster (z-delta)">
+</p>
+
+### Cluster personas (high-level)
+- **Cluster 0 — Frequent Transactors:** high purchase frequency/transactions, low cash advance, lower balance.
+- **Cluster 1 — High-Value Spenders:** highest purchases/transactions and payments, higher credit limit, low cash advance.
+- **Cluster 2 — Low-Usage / Inactive:** below-average activity across most behaviors.
+- **Cluster 3 — Cash-Advance Heavy / Revolvers:** high cash advance + balance/min payments, lower full-payment tendency.
+
+<details>
+  <summary>Show per-cluster driver charts</summary>
+  <p align="center">
+    <img src="reports/figures/Frequent Purchasers (low cash advance).png" width="900" alt="Cluster 0 drivers (z-delta)">
+  </p>
+  <p align="center">
+    <img src="reports/figures/High-Value Spenders.png" width="900" alt="Cluster 1 drivers (z-delta)">
+  </p>
+  <p align="center">
+    <img src="reports/figures/Low-Usage_Inactive.png" width="900" alt="Cluster 2 drivers (z-delta)">
+  </p>
+  <p align="center">
+    <img src="reports/figures/Cash-Advance Heavy_Revolvers.png" width="900" alt="Cluster 3 drivers (z-delta)">
+  </p>
+</details>
+
 ## Credit-card Service Strategy
 
