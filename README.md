@@ -22,7 +22,7 @@ This is a dataset for developing a customer segmentation. The dataset summarizes
 - PRC_FULL_PAYMENT: Percent of full payment paid by user.
 - TENURE: Tenure of credit card service for user (i.e., how long (in months) you should have held the credit card before they will grant you credit).
 
-Question: Provided this data set consistings this customer's behaviors, how many groups of behaviors are there? How can we approach them with better strategic services?
+## Question: Provided this data set consistings this customer's behaviors, how many groups of behaviors are there? How can we approach them with better strategic services?
 
 ## Skills (Techniques Applied)
 - Data cleaning & validation (missing values, duplicates, consistency checks)
@@ -49,3 +49,7 @@ Question: Provided this data set consistings this customer's behaviors, how many
 6. Cluster evaluation (inertia, silhouette)  
 7. Cluster profiling (z-delta heatmap + per-cluster drivers)  
 8. Segment personas + actionable insights  
+
+## Insights
+
+# Correlated Data Features using Spearman Correalation Heatmap
