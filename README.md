@@ -103,5 +103,13 @@ Positive = higher than typical customer, negative = lower.
   </p>
 </details>
 
-## Credit-card Service Strategy
+## Credit-Card Service Strategy (by Segment)
+
+- **Cluster 1 – High-Value Spenders:** retain & grow via premium rewards, tailored offers, and credit-line optimization (risk-checked).
+- **Cluster 0 – Frequent Transactors:** increase basket size with transaction milestones, installment offers, and category-based promotions.
+- **Cluster 2 – Low-Usage / Inactive:** activation campaigns (first purchase bonus), onboarding improvements, and churn-prevention offers.
+- **Cluster 3 – Cash-Advance Heavy / Revolvers:** reduce risk using autopay/reminder tools, repayment options, fee transparency, and tighter cash-advance controls.
+
+**KPIs:** spend growth, transaction frequency, activation/retention, cash-advance rate, balance trend, payment regularity.
+
 
